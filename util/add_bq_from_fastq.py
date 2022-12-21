@@ -96,7 +96,7 @@ def main(BAM,OUT,MATE1=None,MATE2=None):
 						if qnam in mate1: alignment.query_qualities = mate1[qnam]
 						else: print("WARN: {} present in bam but missing from mate1 file".format(qnam))
 					else:
-						if qnam in mate2: alignment.query_qualities = mate2[qnam][::-1]
+						if qnam in mate2: alignment.query_qualities = mate2[qnam]
 						else: print("WARN: {} present in bam but missing from mate2 file".format(qnam))	
 				
 
